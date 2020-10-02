@@ -1,0 +1,265 @@
+/* strat global */
+*{
+    box-sizing: border-box;
+}
+/*
+<li data-color="#E91E63"></li>
+                    <li data-color="#009688"></li>
+                    <li data-color="#03A9F4"></li>
+                    <li data-color="#4CAF50"></li>
+*/
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --overly-color: rgba(0, 0, 0, .5);
+    --default-color: #FFF;
+    --main-color: rgba(255, 152, 0, 1);
+    --default-transition: all .5s ease-in-out;
+    --my-height: 100vh;
+}
+.container{
+    margin: auto;
+}
+
+/* end global */
+/* start media global */
+@media ( max-width: 767px ){
+    .container{
+        width: 500;
+        margin-left: 0;
+    }
+}
+@media (min-width : 768px){
+    .container{
+        width: 780px;
+    }
+}
+@media (min-width : 992px){
+    .container{
+        width: 1000px;
+    }
+}
+@media (min-width : 1200px){
+    .container{
+        width: 1200px;
+    }
+}
+/* end media global */
+/* start naar boven */
+.naar-boven{
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    font-size: 24px;
+    color: var(--default-color)
+}
+.naar-boven i{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #F00;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: var(--default-transition);
+}
+.naar-boven:hover i{
+    color: var(--main-color);
+    transform: rotateZ(180deg) scale(1.2);
+    border: 1px solid var(--main-color);
+}
+/* end naar boven */
+/*start header*/
+header{
+    padding-top: 20px;
+    height: 100vh;
+    background-image: url('../images/img2H.jpg');
+    background-position: center;
+    background-size: cover;
+    color: var(--default-transition);
+    background-blend-mode: overlay;
+    background-color: var(--overly-color);
+    position: relative;
+}
+
+header > div{
+    display: flex;
+    justify-content: space-between;
+}
+header .logo{
+
+}
+header .logo i{
+    font-size: 24px;
+    transition: var(--default-transition);
+    cursor: pointer;
+}
+header .logo i:hover{
+    color: var(--main-color)
+}
+header nav{
+
+}
+header nav ul{
+    margin: 0
+}
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+header nav ul li::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scale(0);
+    transition: var(--default-transition);
+    transform-origin: right;
+}
+header nav ul li:hover::after{
+    transform: scale(1);
+}
+header nav ul li:hover a{
+    color: var(--main-color);
+}
+header nav ul li a{
+    font-size: 24px;
+    text-transform: capitalize;
+    transition: var(--default-transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+header .intro-msgs{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 120px);
+    font-size: 40px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    
+}
+/* header media */
+@media ( max-width: 767px ){
+    header nav{
+        
+    }
+    header nav ul li{
+        display: block;
+    }
+}
+/* end header */
+
+/* start playlist */
+section.playlist{
+    height: var(--my-height);
+    background-color: yellow;
+    overflow: auto;
+    background-image: url('../images/eyes.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: var(--default-transition);
+}
+section.playlist h2{
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 26px;
+    color: var(--default-color);
+    font-weight: bolder;
+    border-bottom: 1px solid #FFF;
+}
+section.playlist ul{
+    width: fit-content;
+    margin: 10px auto;
+}
+section.playlist ul li{
+    list-style: none;
+    margin: 20px 0;
+    transition: var(--default-transition);
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: var(--default-transition);
+    font-weight: bolder;
+    background-color: var(--overly-color);
+    color: var(--default-color);
+}
+section.playlist ul li:hover{
+    transform: translateX(5px);
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+section.playlist .iframe{
+    margin: 10px auto;
+    text-align: center;
+}
+section.playlist .iframe .myIframe{
+    transition: all 3s ease-in-out;
+}
+/* end playlist */
+/* strat albums */
+section.albums{
+    height: var(--my-height);
+    background-color: violet;
+    overflow: hidden;
+}
+section.albums div{
+    overflow: hidden;
+}
+section.albums div div{
+    float: left;
+    width: 50%;
+}
+/* end albums */
+/* start fistivals */
+section.fistivals{
+    height: var(--my-height);
+    background-color: blueviolet;
+    padding-top: 100px;
+    overflow: auto;
+    
+}
+section.fistivals > div{
+    overflow: hidden;
+}
+section.fistivals div.one,
+section.fistivals div.two{
+    float: left;
+    width: 50%;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    height: 400px;
+}
+section.fistivals div.one{
+    background-color: violet;
+    transform: translateX(-100%);
+}
+section.fistivals div.two{
+    background-color: yellow;
+    transform: translateX(100%);
+}
+.removeTranslateX{
+    transform: translateX(0) !important;
+} 
+/* end fistivals */
+/* start about us */
+section.about-us{
+    height: 50vh;
+    background-color: brown;
+}
+/* end about us */
+/* start footer */
+footer{
+    height: 50vh;
+    background-color: lightblue;
+}
+/* end footer */
