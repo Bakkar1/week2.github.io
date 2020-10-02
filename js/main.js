@@ -25,12 +25,12 @@ var playListElm = document.querySelectorAll('.playlist ul li'),
 let myIframe = document.querySelector('.myIframe');
 if(songOption != null && backgroundOption != null){
     myIframe.src = songOption;
-    myPlayList.style.backgroundImage  = "url('../images/"+ backgroundOption +".jpg')";
+    myPlayList.style.backgroundImage  = "url('images/"+ backgroundOption +".jpg')";
 }
 playListElm.forEach(elm =>{
     elm.onclick = function(){
         myIframe.src = this.getAttribute('data-iframe');
-        myPlayList.style.backgroundImage  = "url('../images/"+ this.getAttribute('data-img') +".jpg')";
+        myPlayList.style.backgroundImage  = "url('images/"+ this.getAttribute('data-img') +".jpg')";
         localStorage.setItem('songChoise' , this.getAttribute('data-iframe'));
         localStorage.setItem('plyBackground' , this.getAttribute('data-img'));
     }
