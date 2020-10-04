@@ -37,7 +37,7 @@ playListElm.forEach(elm =>{
 })
 
 
-var myText = "let's get fun !";
+var myText = "let's get some fun !";
 var introMsg = document.querySelector('.intro-msgs');
 var i = 0;
 window.onload = function(){
@@ -48,6 +48,6 @@ window.onload = function(){
         if(i > myText.length - 1){
             clearInterval(introIntervale);
         }
-    }, 300);
+    }, 350);
     console.log(myText.length)
 }

@@ -1,0 +1,63 @@
+/* strat global */
+*{
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --overly-color: rgba(0, 0, 0, .5);
+    --default-color: #FFF;
+    --main-color: rgba(255, 152, 0, 1);
+    --default-transition: all .5s ease-in-out;
+    --my-height: 100vh;
+}
+.container{
+    margin: auto;
+}
+img{
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+/* end global */
+/* start media global */
+@media ( max-width: 767px ){
+    .container{
+        width: 500;
+        margin-left: 0;
+    }
+}
+@media (min-width : 768px){
+    .container{
+        width: 780px;
+    }
+}
+@media (min-width : 992px){
+    .container{
+        width: 1000px;
+    }
+}
+@media (min-width : 1200px){
+    .container{
+        width: 1200px;
+    }
+}
+/* end media global */
+
+/* start mijn muziek */
+article.mijn-muziek{
+    background-color: gray;
+    height: 100vh;
+}
+.mijn-muziek > div{
+    display: flex;
+}
+.mijn-muziek section:first-child{
+    width: 60%;
+}
+.mijn-muziek section:last-child{
+    width: 40%;
+}
+/* end mijn muziek */

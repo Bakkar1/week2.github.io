@@ -52,7 +52,8 @@ html{
     right: 30px;
     bottom: 20px;
     font-size: 24px;
-    color: var(--default-color)
+    color: var(--default-color);
+    z-index: 10;
 }
 .naar-boven i{
     text-align: center;
@@ -136,14 +137,14 @@ header nav ul li a{
     color: inherit;
 }
 
-header .intro-msgs{
+header p.intro-msgs{
     position: absolute;
     top: calc(50% - 20px);
     left: calc(50% - 120px);
     font-size: 40px;
     color: var(--main-color);
     text-transform: capitalize;
-    
+    transition: 3s;
 }
 /* header media */
 @media ( max-width: 767px ){
@@ -206,20 +207,41 @@ section.playlist .iframe .myIframe{
     transition: all 3s ease-in-out;
 }
 /* end playlist */
-/* strat albums */
-section.albums{
+/* strat oefening4 & 5 */
+section.oefening4{
     height: var(--my-height);
-    background-color: violet;
-    overflow: hidden;
+    background-color: #d9ddd7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: auto;
 }
-section.albums div{
-    overflow: hidden;
+section.oefening4 h2{
+    color: #05631e;
+    text-transform: capitalize;
 }
-section.albums div div{
-    float: left;
-    width: 50%;
+section.oefening4 p{
+    background-color: #6a7689;
+    color: #FFF;
+    padding: 20px;
 }
-/* end albums */
+section.oefening4 .hightlight{
+    color: yellow;
+    border: 2px solid yellow;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+section.oefening4 h3{
+    text-transform: capitalize;
+}
+section.oefening4 a{
+    color: inherit;
+    text-transform: capitalize;
+}
+section.oefening4 a:hover{
+    color: #6df469;
+    
+}
+/* end oefening4vvvvvv */
 /* start fistivals */
 section.fistivals{
     height: var(--my-height);
