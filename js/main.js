@@ -51,3 +51,5 @@ window.onload = function(){
     }, 350);
     console.log(myText.length)
 }
+
+console.log("&#64;");
