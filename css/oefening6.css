@@ -17,6 +17,9 @@ html{
 .container{
     margin: auto;
 }
+body{
+    overflow-x: hidden;
+}
 img{
     width: 200px;
     height: 200px;
@@ -156,3 +159,23 @@ article.oefening7 section audio{
 }
 
 /* end oefening 7 */
+.parent {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightseagreen;
+}
+.parent div{
+   
+}
+.parent .one{
+    width: 70%;
+    background-color: lawngreen;
+    display: inline-block;
+    height: 100%;
+}
+.parent .two{
+    width: 30%;
+    background-color: lightcoral;
+    display: inline-block;
+    height: 100%;
+}
